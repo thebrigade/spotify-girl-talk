@@ -6,14 +6,12 @@ exports.init = =>
     console.error "encountered an unexpected error: #{e}"
 
   # create views and model objects
-  tab1View = new views.Tab1View()
-  tab2View = new views.Tab2View()
+  mainView = new views.MainView()
 
   app = new spore.Spore sp, config.trace, config.appName, tracker
 
   # register presenters
-  app.register 'tab1',     new presenters.Tab1Presenter tab1View
-  app.register 'tab2',     new presenters.Tab2Presenter tab2View
+  app.register 'main', new presenters.MainPresenter mainView
 
   # prevent image dragging on all img tags
   $('img').live 'dragstart', (event) -> event.preventDefault()

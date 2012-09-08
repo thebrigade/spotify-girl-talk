@@ -10,28 +10,22 @@
         "36x18":"icon-36x18.png"
     },
     "AppName":{
-        "en":"app-template"
+        "en":"girl-talk"
     },
     "AppDescription":{
-        "en":"The Brigade's template for Spotify apps"
+        "en":"girl talk"
     },
     "BundleVersion": "1.0.5",
-    "BundleIdentifier": "app-template",
+    "BundleIdentifier": "girl-talk",
     "RequiredInterface": 1,
     "SupportedLanguages":[
         "en"
     ],
     "DefaultTabs":[
         {
-            "arguments":"tab1",
+            "arguments":"main",
             "title":{
-                "en":"Tab 1"
-            }
-        },
-        {
-            "arguments":"tab2",
-            "title":{
-                "en":"Tab 2"
+                "en":"Feed the Animals"
             }
         }
     ],
