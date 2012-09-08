@@ -29,19 +29,11 @@ class MainPresenter extends spore.Presenter
     @startQueue = JSON.parse (JSON.stringify model.model)
     @endQueue = JSON.parse (JSON.stringify model.model)
 
-    console.log @startQueue
-    console.log @endQueue
-
-
     if @poller?
       clearInterval @poller
     @poller = every pollInterval, () =>
       pos = models.player.position
       @view.showPosition pos
-
-      console.log pos
-      console.log @startQueue[0].start
-      console.log @endQueue[0].start
 
       if pos >= @startQueue[0].start
         record = @startQueue.shift()
