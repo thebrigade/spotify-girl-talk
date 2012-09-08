@@ -28,6 +28,7 @@ class MainView extends BaseView
     template = ->
       a id: 'play', href: '', "Play"
       h1 id: "time", style: 'color: white;', "0:00"
+      div id: "tracks"
     @el.append CoffeeKup.render template
     $("#play").click (e) =>
       e.preventDefault()
@@ -36,6 +37,15 @@ class MainView extends BaseView
 
   showPosition: (millis) =>
     $('#time').text (millis / 1000)
+
+  startTrack: (record) =>
+    models.Track.fromURI record.uri, (spotifyTrack) =>
+      $("#tracks").append "<div>#{spotifyTrack.data.name}</div>"
+
+  endTrack: (record) =>
+    models.Track.fromURI record.uri, (spotifyTrack) =>
+      console.log "end - #{spotifyTrack.data.uri}"
+
 
   hide: () =>
     @el.hide()
