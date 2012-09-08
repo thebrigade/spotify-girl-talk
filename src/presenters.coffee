@@ -15,7 +15,6 @@ class MainPresenter extends spore.Presenter
 
     @view.display()
     @view.show()
-    @startPollingTrack()
 
   unbind: () =>
     @view.hide()
@@ -35,13 +34,15 @@ class MainPresenter extends spore.Presenter
       pos = models.player.position
       @view.showPosition pos
 
-      if pos >= @startQueue[0].start
-        record = @startQueue.shift()
-        @view.startTrack record
+      if @startQueue.length > 0
+        if pos >= @startQueue[0].start
+          record = @startQueue.shift()
+          @view.startTrack record
 
-      if pos >= @endQueue[0].end
-        record = @endQueue.shift()
-        @view.endTrack record
+      if @endQueue.length > 0
+        if pos >= @endQueue[0].end
+          record = @endQueue.shift()
+          @view.endTrack record
 
 
 exports.MainPresenter = MainPresenter
