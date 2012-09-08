@@ -27,7 +27,8 @@
             "title":{
                 "en":"Feed the Animals"
             }
-        }
+        },
+
     ],
     "VendorIdentifier":"com.thisisthebrigade",
     "RequiredPermissions":[
