@@ -31,6 +31,7 @@ millisecondsFromText = (text) ->
   return (min * 60 * 1000) + (sec * 1000)
 
 started = false
+id = 0
 reader.addListener "data", (data) ->
   if not started
     started = true
@@ -38,6 +39,7 @@ reader.addListener "data", (data) ->
   track = parseInt data[0]
   return if track isnt 4
   record =
+    id: id++
     track: track
     start: millisecondsFromText data[6]
     end: millisecondsFromText data[10]
