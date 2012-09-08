@@ -70,6 +70,52 @@ td { vertical-align: top; }
 /* ===== Primary Styles ========================================================
    Author:
    ========================================================================== */
+
+html {
+  background-color: #202030;
+}
+
+body {
+  background-color: #202030;
+  color:#cacad8;
+  -webkit-font-smoothing: antialiased;
+  font:normal 13px/1.5 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h1 {
+  font-size:14px;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h2 {
+  font-size:12px;
+  color:#9797a7;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#tracks {
+  overflow:hidden;
+  height:230px;
+}
+
+.album {
+  float:left;
+  width:180px;
+  height:220px;
+  padding:5px;
+}
+
+.album-artwork {
+  display:block;
+  margin-bottom:5px;
+}
+
 .tab {
     display: none;
 }

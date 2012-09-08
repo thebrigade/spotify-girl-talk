@@ -35,7 +35,17 @@ class MainView extends BaseView
 
   startTrack: (record) =>
     models.Track.fromURI record.uri, (spotifyTrack) =>
-      $("#tracks").append "<div>#{spotifyTrack.data.name}</div>"
+      console.log('spotifyTrack: ', spotifyTrack.data)
+
+      template = ->
+        div class: 'album', ->
+          div class: 'album-artwork', ->
+            img src: @spotifyTrack.data.album.cover, width: 180
+          div class: 'album-info', ->
+            h1 @spotifyTrack.data.name
+            h2 @spotifyTrack.data.artists[0].name
+
+      $("#tracks").prepend CoffeeKup.render template, spotifyTrack:spotifyTrack
 
   endTrack: (record) =>
     models.Track.fromURI record.uri, (spotifyTrack) =>
