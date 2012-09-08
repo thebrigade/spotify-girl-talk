@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="author" content="thebrigade">
+
+    <title>Rancid</title>
+
+    <link rel="stylesheet" href="sp://import/css/adam.css">
+    <link rel="stylesheet" href="sp://import/css/api.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div id="overlay" style="display: none;"></div>
+    <div id="offline" style="display: none;">
+        <div id="offlineMessage">This app is not available while offline</div>
+    </div>
+    <div id="container">
+        <div id="tab1" class="tab"></div>
+        <div id="tab2" class="tab"></div>
+    </div>
+
+    <div id="loading" class="throbber">
+        <div>
+            <span></span>
+        </div>
+    </div>
+
+    <script src="lib/vendor/jquery-1.7.1.min.js"></script>
+    <script src="lib/vendor/coffee-script.js"></script>
+    <script src="lib/vendor/coffeekup.js"></script>
+    <script src="lib/vendor/underscore-min.js"></script>
+    <script>
+        after = function(delay, callback) {
+            return setTimeout(callback, delay);
+        };
+
+        every = function(interval, callback) {
+            return setInterval(callback, interval);
+        };
+
+        debug = function(msg) { console.debug(msg); };
+        warn = function(msg) { console.warn(msg); };
+        trace = function(msg) { console.log(msg); };
+        //        debug = function(msg) {  };
+        //        warn = function(msg) {  };
+        //        trace = function(msg) {  };
+
+        sp            = getSpotifyApi(1);
+        models        = sp.require('sp://import/scripts/api/models');
+        dnd           = sp.require('sp://import/scripts/dnd');
+        ui            = sp.require('sp://import/scripts/ui');
+        spViews       = sp.require('sp://import/scripts/api/views');
+        auth          = sp.require('sp://import/scripts/api/auth');
+        googletracker = sp.require('lib/googletracker');
+        config        = sp.require('lib/config');
+        spore         = sp.require('lib/spore');
+        main          = sp.require('lib/main');
+        model         = sp.require('lib/model');
+        views         = sp.require('lib/views');
+        presenters    = sp.require('lib/presenters');
+        window.tracker = tracker = main.tracker
+
+        main.init();
+    </script>
+    <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+</html>

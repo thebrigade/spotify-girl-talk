@@ -1,0 +1,42 @@
+{
+    "BundleType":"Application",
+    "AcceptedLinkTypes":[
+    ],
+    "AppIcon":{
+        "256x256":"icon-256x256.png",
+        "128x128":"icon-128x128.png",
+        "64x64":"icon-64x64.png",
+        "32x32":"icon-32x32.png",
+        "36x18":"icon-36x18.png"
+    },
+    "AppName":{
+        "en":"app-template"
+    },
+    "AppDescription":{
+        "en":"The Brigade's template for Spotify apps"
+    },
+    "BundleVersion": "1.0.5",
+    "BundleIdentifier": "app-template",
+    "RequiredInterface": 1,
+    "SupportedLanguages":[
+        "en"
+    ],
+    "DefaultTabs":[
+        {
+            "arguments":"tab1",
+            "title":{
+                "en":"Tab 1"
+            }
+        },
+        {
+            "arguments":"tab2",
+            "title":{
+                "en":"Tab 2"
+            }
+        }
+    ],
+    "VendorIdentifier":"com.thisisthebrigade",
+    "RequiredPermissions":[
+        "http://*"
+    ]
+}
