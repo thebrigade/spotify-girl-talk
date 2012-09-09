@@ -82,6 +82,10 @@ body {
   font:normal 13px/1.5 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+#girltalk {
+  padding:10px;
+}
+
 h1 {
   font-size:14px;
   white-space: nowrap;
@@ -101,13 +105,13 @@ h2 {
 
 #tracks {
   overflow:hidden;
-  height:230px;
+  height:305px;
 }
 
 .album {
   float:left;
-  width:180px;
-  height:220px;
+  width:256px;
+  height:305px;
   padding:5px;
 }
 
