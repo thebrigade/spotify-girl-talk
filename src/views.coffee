@@ -28,7 +28,7 @@ class MainView extends BaseView
     template = ->
       div id: 'girltalk', ->
         img src: 'girltalk.png', width: '100%'
-      h1 id: "time", style: 'color: white;', "0:00"
+      # h1 id: "time", style: 'color: white;', "0:00"
       div id: "tracks"
 
     @el.append CoffeeKup.render template

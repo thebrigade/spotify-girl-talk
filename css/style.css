@@ -106,6 +106,7 @@ h2 {
 #tracks {
   overflow:hidden;
   height:305px;
+  margin-top:20px;
 }
 
 .album {
