@@ -16,13 +16,12 @@ class MainPresenter extends spore.Presenter
     @view.display()
     @view.show()
 
+    models.Track.fromURI 'spotify:track:4fOFWrYmRUfS9sC9TyOlUb', (spotifyTrack) =>
+      models.player.play spotifyTrack
+      @startPollingTrack()
+
   unbind: () =>
     @view.hide()
-
-  playerChange: (playerChange) =>
-    console.log "got player change"
-    console.log playerChange
-    @startPollingTrack()
 
   startPollingTrack: () =>
     @startQueue = JSON.parse (JSON.stringify model.model)
