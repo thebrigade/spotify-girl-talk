@@ -76,6 +76,7 @@ html {
 }
 
 body {
+  overflow:hidden;
   background-color: #202030;
   color:#cacad8;
   -webkit-font-smoothing: antialiased;
@@ -84,6 +85,14 @@ body {
 
 #girltalk {
   padding:10px;
+  -webkit-animation: pulsate 1s ease-out;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(1);}
+    50% {-webkit-transform: scale(1.01);}
+    100% {-webkit-transform: scale(1);}
 }
 
 h1 {
@@ -104,16 +113,27 @@ h2 {
 }
 
 #tracks {
-  overflow:hidden;
-  height:305px;
   margin-top:20px;
+  width:10000px;
 }
 
 .album {
   float:left;
-  width:256px;
-  height:305px;
+  width:180px;
+  height:220px;
   padding:5px;
+}
+
+#played_tracks {
+  width:100%;
+  position: absolute;
+  top: 620px;
+  opacity: .4;
+}
+
+#played_tracks .album {
+  width:64px;
+  height:64px;
 }
 
 .album-artwork {
