@@ -103,6 +103,23 @@ h1 {
   text-overflow: ellipsis;
 }
 
+.trackLink {
+    font-size:14px;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artistLink {
+    font-size:12px;
+    color:#9797a7;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 h2 {
   font-size:12px;
   color:#9797a7;

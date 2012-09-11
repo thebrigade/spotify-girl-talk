@@ -44,8 +44,8 @@ class MainView extends BaseView
           div class: 'album-artwork', ->
             img src: @spotifyTrack.data.album.cover, width: 180
           div class: 'album-info', ->
-            h1 @spotifyTrack.data.name
-            h2 @spotifyTrack.data.artists[0].name
+            a class: 'trackLink', href: @spotifyTrack.data.uri, -> h1 @spotifyTrack.data.name
+            a class: 'artistLink', href: @spotifyTrack.data.artists[0].uri, -> h2 @spotifyTrack.data.artists[0].name
 
       $("#tracks").prepend CoffeeKup.render template, spotifyTrack:spotifyTrack, record:record
 
