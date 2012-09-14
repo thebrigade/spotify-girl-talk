@@ -42,7 +42,7 @@ class MainView extends BaseView
       template = ->
         div class: 'album animated bounceIn', id: 'album_' + @record.id, ->
           div class: 'album-artwork', ->
-            img src: @spotifyTrack.data.album.cover, width: 180
+            a href: @spotifyTrack.data.album.uri, -> img src: @spotifyTrack.data.album.cover, width: 180
           div class: 'album-info', ->
             a class: 'trackLink', href: @spotifyTrack.data.uri, -> h1 @spotifyTrack.data.name
             a class: 'artistLink', href: @spotifyTrack.data.artists[0].uri, -> h2 @spotifyTrack.data.artists[0].name
